@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sharecash/info/info_detail_page.dart';
 
 import 'nav/navi_bar.dart';
 
@@ -12,22 +13,15 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
-      home: const NaviBar(),
-    );
-  }
-}
-
-class Home extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: Icon(Icons.offline_bolt, size: 128.0, color: Colors.black12),
-      bottomNavigationBar: NaviBar(),
-    );
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData(
+          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+          useMaterial3: true,
+        ),
+        initialRoute: '/',
+        routes: {
+          '/': (context) => const NaviBar(),
+          '/info': (context) => const InfoDetailPage(),
+        });
   }
 }

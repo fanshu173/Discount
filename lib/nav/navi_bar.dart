@@ -24,9 +24,9 @@ class _NaviBarState extends State<NaviBar> {
   }
 
   final List _pageList = [
-    InfoFragment(),
+    const InfoFragment(),
     InviteFragment(),
-    MyFragment(),
+    const MyFragment(),
   ];
 
   @override
@@ -41,15 +41,18 @@ class _NaviBarState extends State<NaviBar> {
         items: const [
           BottomNavigationBarItem(
             icon: Icon(Icons.explore),
-            activeIcon: Icon(Icons.explore, color: Colors.redAccent),
+            activeIcon: Icon(Icons.explore, color: Colors.red),
             label: 'Explore',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.insert_invitation_rounded),
+            activeIcon:
+                Icon(Icons.insert_invitation_rounded, color: Colors.red),
             label: 'Invite',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.person),
+            activeIcon: Icon(Icons.person, color: Colors.red),
             label: 'My',
           ),
         ],

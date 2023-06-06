@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 
 class InviteFragment extends StatelessWidget {
+  const InviteFragment({super.key});
+
     
   @override
   Widget build(BuildContext context) {
-    return Text('InviteFragment');
+     return const Center(child: Text('InviteFragment'));
   }
 }
